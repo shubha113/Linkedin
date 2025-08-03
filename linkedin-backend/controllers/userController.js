@@ -102,7 +102,7 @@ export const getUserProfile = catchAsyncError(async (req, res, next) => {
   }
 
   const posts = await Post.find({ author: req.params.id })
-    .populate("author", "name email")
+    .populate("author", "name email avatar")
     .sort({ createdAt: -1 });
 
   res.status(200).json({
@@ -111,3 +111,4 @@ export const getUserProfile = catchAsyncError(async (req, res, next) => {
     data: { user, posts },
   });
 });
+
