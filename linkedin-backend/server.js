@@ -23,7 +23,7 @@ app.use(cookieParser());
 // CORS configuration
 app.use(
   cors({
-    origin: ["https://linkedin-frontend-isne.onrender.com"],
+    origin: ["https://linkedin-frontend-blue.vercel.app"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -49,4 +49,5 @@ app.listen(PORT, () => {
 });
 
 app.use(ErrorMiddleware);
+
 
