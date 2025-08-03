@@ -23,7 +23,7 @@ app.use(cookieParser());
 // CORS configuration
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5173"],
+    origin: ["https://linkedin-frontend-isne.onrender.com"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -49,3 +49,4 @@ app.listen(PORT, () => {
 });
 
 app.use(ErrorMiddleware);
+
