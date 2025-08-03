@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://linkedin-1ab1.onrender.com',
   withCredentials: true,
 });
 
@@ -16,3 +16,4 @@ api.interceptors.request.use(
 );
 
 export default api;
+
