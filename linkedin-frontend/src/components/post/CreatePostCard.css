@@ -1,0 +1,260 @@
+.create-post-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e1e5e9;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.create-post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-input-trigger {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #e1e5e9;
+  border-radius: 24px;
+  background: #f3f2ef;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.post-input-trigger:hover {
+  background: #e9e5df;
+  border-color: #d0d0d0;
+}
+
+.create-post-form {
+  border-top: 1px solid #e1e5e9;
+  padding-top: 16px;
+}
+
+.post-textarea-container {
+  margin-bottom: 16px;
+}
+
+.post-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.post-textarea:focus {
+  border-color: #0a66c2;
+  box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.1);
+}
+
+.image-preview-container {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e1e5e9;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.remove-image-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.post-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.media-options {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.media-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.media-option:hover:not(:disabled) {
+  background: #f3f2ef;
+}
+
+.media-option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.option-icon {
+  font-size: 16px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.cancel-btn {
+  padding: 8px 16px;
+  border: 1px solid #e1e5e9;
+  background: #fff;
+  color: #666;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background: #f3f2ef;
+  border-color: #d0d0d0;
+}
+
+.post-btn {
+  padding: 8px 20px;
+  border: none;
+  background: #0a66c2;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.post-btn:hover:not(:disabled) {
+  background: #004182;
+}
+
+.post-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #e1e5e9;
+  padding-top: 12px;
+  margin-top: 16px;
+}
+
+.quick-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  flex: 1;
+  justify-content: center;
+}
+
+.quick-action:hover {
+  background: #f3f2ef;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .create-post-card {
+    padding: 16px;
+  }
+  
+  .post-options {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .media-options {
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  .post-actions {
+    justify-content: flex-end;
+  }
+  
+  .quick-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .quick-action {
+    justify-content: flex-start;
+  }
+}
