@@ -7,7 +7,7 @@ const sendToken = (user, res, statusCode, message) => {
         ),
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        sameSite: 'lax'
+        sameSite: 'none'
     };
 
     res.status(statusCode).cookie("token", token, options).json({
@@ -17,5 +17,6 @@ const sendToken = (user, res, statusCode, message) => {
         token,
     });
 };
+
 
 export default sendToken;
